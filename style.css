@@ -1,0 +1,1067 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #19342b;
+    line-height: 1.6;
+}
+
+/* ================= HEADER ================= */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 7%;
+
+    background: rgba(255, 255, 255, 0.97);
+
+    border-bottom: 3px solid #b7dfc8;
+
+    box-shadow: 0 3px 18px rgba(20, 90, 55, 0.08);
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+.logo-area h2 {
+    color: #126b43;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.logo-area span {
+    color: #6c897a;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.navbar a,
+.dropbtn {
+    text-decoration: none;
+    color: #214d38;
+    background: transparent;
+
+    border: none;
+
+    padding: 10px 14px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    border-radius: 25px;
+
+    transition: 0.3s;
+}
+
+.navbar a:hover,
+.dropbtn:hover {
+    background: #dff3e7;
+    color: #0b6b40;
+}
+
+/* ================= DROPDOWN ================= */
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+
+    position: absolute;
+    top: 45px;
+    right: 0;
+
+    min-width: 220px;
+
+    background: white;
+
+    border: 1px solid #c8e7d4;
+
+    border-radius: 14px;
+
+    box-shadow: 0 12px 30px rgba(20, 80, 50, 0.15);
+
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 12px 16px;
+
+    border-radius: 0;
+
+    color: #28543f;
+}
+
+.dropdown-content a:hover {
+    background: #eaf8ef;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 88vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+    overflow: hidden;
+
+    padding: 80px 8%;
+
+    background:
+        radial-gradient(circle at 90% 15%, #d8f1e2 0, transparent 25%),
+        radial-gradient(circle at 10% 90%, #eef9f2 0, transparent 30%),
+        #ffffff;
+
+    border-bottom: 1px solid #d5eddd;
+}
+
+.hero-content {
+    max-width: 720px;
+
+    position: relative;
+    z-index: 2;
+}
+
+.small-heading {
+    color: #3b9b68;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 8vw, 90px);
+
+    line-height: 0.95;
+
+    letter-spacing: -3px;
+
+    color: #163d2b;
+}
+
+.hero h1 span {
+    color: #14945a;
+}
+
+.hero h2 {
+    margin-top: 12px;
+
+    color: #668578;
+
+    font-size: 20px;
+
+    letter-spacing: 6px;
+}
+
+.motto {
+    margin-top: 25px;
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    color: #0d8750;
+
+    letter-spacing: 2px;
+}
+
+.hero-description {
+    margin-top: 18px;
+
+    max-width: 620px;
+
+    color: #63786d;
+
+    font-size: 17px;
+}
+
+.hero-buttons {
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+.btn {
+    text-decoration: none;
+
+    padding: 13px 25px;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.primary-btn {
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        #087b46,
+        #18a566
+    );
+
+    box-shadow: 0 8px 20px rgba(20, 130, 80, 0.2);
+}
+
+.primary-btn:hover {
+    transform: translateY(-3px);
+}
+
+.secondary-btn {
+    color: #137747;
+
+    border: 2px solid #8dccaa;
+
+    background: white;
+}
+
+.secondary-btn:hover {
+    background: #e8f7ee;
+}
+
+/* ================= DECORATION ================= */
+
+.hero-decoration {
+    position: absolute;
+
+    right: -80px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 500px;
+    height: 500px;
+}
+
+.circle {
+    position: absolute;
+
+    border-radius: 50%;
+
+    border: 1px solid #b6dec6;
+}
+
+.circle-one {
+    width: 500px;
+    height: 500px;
+}
+
+.circle-two {
+    width: 360px;
+    height: 360px;
+
+    top: 70px;
+    left: 70px;
+
+    border: 25px solid rgba(24, 158, 94, 0.08);
+}
+
+.circle-three {
+    width: 220px;
+    height: 220px;
+
+    top: 140px;
+    left: 140px;
+
+    background: rgba(38, 165, 100, 0.06);
+
+    border: none;
+}
+
+/* ================= COMMON SECTIONS ================= */
+
+section {
+    padding: 90px 8%;
+}
+
+.section-heading {
+    text-align: center;
+
+    max-width: 750px;
+
+    margin: 0 auto 45px;
+}
+
+.section-heading > p:first-child {
+    color: #23915c;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+.section-heading h2 {
+    margin-top: 8px;
+
+    font-size: 38px;
+
+    color: #183f2d;
+}
+
+.section-heading span {
+    display: block;
+
+    width: 55px;
+    height: 4px;
+
+    margin: 15px auto;
+
+    border-radius: 10px;
+
+    background: linear-gradient(
+        90deg,
+        #0c814b,
+        #7bc89b
+    );
+}
+
+.section-heading > p:last-child {
+    color: #718379;
+}
+
+/* ================= ENQUIRY ================= */
+
+.enquiry-section {
+    background: #f5fbf7;
+
+    border-left: 7px solid #76c99a;
+    border-right: 7px solid #d2efdc;
+}
+
+.form-card {
+    max-width: 850px;
+
+    margin: auto;
+
+    padding: 35px;
+
+    background: white;
+
+    border: 1px solid #cfe8d8;
+
+    border-radius: 20px;
+
+    box-shadow: 0 15px 40px rgba(24, 91, 55, 0.08);
+}
+
+.form-row {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+}
+
+.input-group {
+    margin-bottom: 18px;
+}
+
+.input-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #315b47;
+
+    font-weight: bold;
+
+    font-size: 14px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 1px solid #c8dfd1;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: #39a86d;
+
+    box-shadow: 0 0 0 3px #e3f5ea;
+}
+
+.form-button {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    background: linear-gradient(
+        135deg,
+        #087b46,
+        #20a767
+    );
+
+    transition: 0.3s;
+}
+
+.form-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 20px rgba(15, 125, 70, 0.2);
+}
+
+.success-message {
+    margin-top: 12px;
+
+    text-align: center;
+
+    color: #18844e;
+
+    font-weight: bold;
+}
+
+/* ================= ABOUT ================= */
+
+.about-section {
+    background: white;
+
+    border-top: 1px solid #e0f0e5;
+    border-bottom: 1px solid #e0f0e5;
+}
+
+.about-content {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.about-card {
+    padding: 35px 28px;
+
+    background: #fbfefc;
+
+    border: 1px solid #cde6d6;
+
+    border-radius: 18px;
+
+    position: relative;
+
+    transition: 0.3s;
+}
+
+.about-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    border-radius: 18px 18px 0 0;
+
+    background: linear-gradient(
+        90deg,
+        #087b46,
+        #9bd7b4
+    );
+}
+
+.about-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 15px 35px rgba(20, 100, 60, 0.1);
+}
+
+.icon {
+    display: inline-flex;
+
+    width: 45px;
+    height: 45px;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #e0f4e8;
+
+    color: #0a814b;
+
+    font-weight: bold;
+
+    margin-bottom: 18px;
+}
+
+.about-card h3 {
+    color: #1b5238;
+
+    margin-bottom: 10px;
+}
+
+.about-card p {
+    color: #6d8076;
+
+    font-size: 14px;
+}
+
+/* ================= REGISTRATION ================= */
+
+.registration-section {
+    background:
+        linear-gradient(
+            180deg,
+            #f7fcf9,
+            #ffffff
+        );
+}
+
+.registration-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.registration-card {
+    text-align: center;
+
+    padding: 30px 20px;
+
+    background: white;
+
+    border: 1px solid #cce6d6;
+
+    border-radius: 18px;
+
+    transition: 0.3s;
+}
+
+.registration-card:hover {
+    transform: translateY(-7px);
+
+    border-color: #69b98c;
+
+    box-shadow: 0 15px 35px rgba(20, 110, 65, 0.1);
+}
+
+.registration-icon {
+    width: 60px;
+    height: 60px;
+
+    margin: auto auto 18px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: white;
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    background: linear-gradient(
+        135deg,
+        #087b46,
+        #43b879
+    );
+}
+
+.registration-card h3 {
+    color: #1d5038;
+
+    margin-bottom: 10px;
+}
+
+.registration-card p {
+    color: #718178;
+
+    font-size: 14px;
+
+    min-height: 65px;
+}
+
+.registration-card button {
+    border: none;
+
+    padding: 10px 20px;
+
+    border-radius: 25px;
+
+    background: #e0f4e8;
+
+    color: #0b7544;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.registration-card button:hover {
+    background: #0b824c;
+
+    color: white;
+}
+
+/* ================= MODAL ================= */
+
+.modal {
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 2000;
+
+    padding: 30px;
+
+    background: rgba(9, 43, 27, 0.55);
+
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    width: 100%;
+    max-width: 700px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    position: relative;
+
+    padding: 35px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    border: 2px solid #a9d8bb;
+
+    box-shadow: 0 20px 60px rgba(0, 70, 40, 0.2);
+}
+
+.close-button {
+    position: absolute;
+
+    right: 18px;
+    top: 15px;
+
+    width: 35px;
+    height: 35px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #e5f5eb;
+
+    color: #167547;
+
+    font-size: 24px;
+
+    cursor: pointer;
+}
+
+.form-label {
+    color: #23915c;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+.modal-content h2 {
+    color: #19432f;
+
+    margin: 5px 0 25px;
+}
+
+/* ================= CONTACT ================= */
+
+.contact-section {
+    background:
+        linear-gradient(
+            135deg,
+            #0a5736,
+            #0d7b4b
+        );
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.contact-section::before {
+    content: "";
+
+    position: absolute;
+
+    width: 400px;
+    height: 400px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255,255,255,0.12);
+
+    right: -120px;
+    top: -100px;
+}
+
+.light-heading h2,
+.light-heading > p {
+    color: white;
+}
+
+.light-heading span {
+    background: #a9e4bf;
+}
+
+.contact-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    position: relative;
+    z-index: 2;
+}
+
+.contact-item {
+    text-align: center;
+
+    padding: 30px 20px;
+
+    border: 1px solid rgba(255,255,255,0.2);
+
+    border-radius: 18px;
+
+    background: rgba(255,255,255,0.07);
+}
+
+.contact-icon {
+    width: 50px;
+    height: 50px;
+
+    margin: auto auto 15px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: white;
+
+    color: #0a7445;
+
+    font-weight: bold;
+}
+
+.contact-item h3 {
+    color: white;
+
+    margin-bottom: 10px;
+}
+
+.contact-item p,
+.contact-item a {
+    color: #d9f3e3;
+
+    text-decoration: none;
+
+    font-size: 14px;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    text-align: center;
+
+    padding: 30px 20px;
+
+    background: #073a25;
+
+    color: #bfe6ce;
+}
+
+.footer-logo {
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+footer p {
+    margin-top: 5px;
+}
+
+.copyright {
+    font-size: 12px;
+
+    color: #8ebba1;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1000px) {
+
+    .header {
+        padding: 15px 4%;
+    }
+
+    .registration-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-decoration {
+        opacity: 0.5;
+    }
+}
+
+@media (max-width: 750px) {
+
+    .header {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .hero {
+        text-align: center;
+
+        padding: 70px 6%;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+    }
+
+    .hero-decoration {
+        display: none;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .registration-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .modal {
+        padding: 15px;
+    }
+
+    .modal-content {
+        padding: 25px 20px;
+    }
+}
+
+@media (max-width: 450px) {
+
+    section {
+        padding: 65px 5%;
+    }
+
+    .logo-area h2 {
+        font-size: 15px;
+    }
+
+    .logo {
+        width: 45px;
+        height: 45px;
+    }
+
+    .navbar a,
+    .dropbtn {
+        padding: 8px 9px;
+
+        font-size: 12px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero h2 {
+        font-size: 15px;
+
+        letter-spacing: 4px;
+    }
+
+    .motto {
+        font-size: 17px;
+    }
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+    .form-card {
+        padding: 22px;
+    }
+}
+/* =========================
+   REGISTRATION DROPDOWN
+========================= */
+
+.nav-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.nav-dropdown-content {
+    display: none;
+
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+
+    min-width: 190px;
+
+    background: #ffffff;
+
+    border: 1px solid #d4eadc;
+
+    border-radius: 12px;
+
+    padding: 8px 0;
+
+    box-shadow:
+        0 12px 30px
+        rgba(20, 100, 60, 0.15);
+
+    z-index: 999;
+}
+
+.nav-dropdown-content a {
+    display: block;
+
+    padding: 11px 18px;
+
+    color: #24513b;
+
+    text-decoration: none;
+
+    font-size: 14px;
+}
+
+.nav-dropdown-content a:hover {
+    background: #eaf7ef;
+
+    color: #087b46;
+}
+
+.nav-dropdown:hover .nav-dropdown-content {
+    display: block;
+}

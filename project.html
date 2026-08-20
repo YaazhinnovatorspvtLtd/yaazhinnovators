@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Project Registration | Yaazh Innovators</title>
+
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+
+        .registration-page {
+
+            min-height: 100vh;
+
+            padding: 50px 20px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            background:
+                radial-gradient(
+                    circle at top right,
+                    #e0f5e8,
+                    transparent 35%
+                ),
+                #ffffff;
+        }
+
+
+        .registration-box {
+
+            width: 100%;
+
+            max-width: 700px;
+
+            background: white;
+
+            padding: 40px;
+
+            border-radius: 22px;
+
+            border: 1px solid #c7e5d2;
+
+            box-shadow:
+                0 15px 45px
+                rgba(20, 100, 60, 0.12);
+        }
+
+
+        .registration-logo {
+
+            width: 75px;
+
+            height: 75px;
+
+            object-fit: contain;
+
+            display: block;
+
+            margin: 0 auto 15px;
+        }
+
+
+        .registration-heading {
+
+            text-align: center;
+
+            margin-bottom: 30px;
+        }
+
+
+        .registration-heading p {
+
+            color: #23915c;
+
+            font-size: 13px;
+
+            font-weight: bold;
+
+            letter-spacing: 3px;
+        }
+
+
+        .registration-heading h1 {
+
+            color: #173e2c;
+
+            font-size: 32px;
+
+            margin: 8px 0;
+        }
+
+
+        .registration-heading span {
+
+            color: #6c8176;
+
+            font-size: 14px;
+        }
+
+
+        .registration-form {
+
+            display: grid;
+
+            gap: 18px;
+        }
+
+
+        .field {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 7px;
+        }
+
+
+        .field label {
+
+            color: #315b47;
+
+            font-weight: bold;
+
+            font-size: 14px;
+        }
+
+
+        .field input,
+        .field textarea,
+        .field select {
+
+            padding: 13px 15px;
+
+            border: 1px solid #c8dfd1;
+
+            border-radius: 10px;
+
+            outline: none;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 14px;
+
+            background: #fbfefc;
+        }
+
+
+        .field input:focus,
+        .field textarea:focus,
+        .field select:focus {
+
+            border-color: #299763;
+
+            box-shadow:
+                0 0 0 3px #e4f6eb;
+        }
+
+
+        .two-fields {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 18px;
+        }
+
+
+        .submit-button {
+
+            margin-top: 8px;
+
+            padding: 14px;
+
+            border: none;
+
+            border-radius: 10px;
+
+            color: white;
+
+            font-size: 15px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #087b46,
+                    #20a767
+                );
+
+            transition: 0.3s;
+        }
+
+
+        .submit-button:hover {
+
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 8px 20px
+                rgba(15, 125, 70, 0.2);
+        }
+
+
+        .back-home {
+
+            display: block;
+
+            text-align: center;
+
+            margin-top: 20px;
+
+            color: #16804d;
+
+            text-decoration: none;
+
+            font-size: 14px;
+
+            font-weight: bold;
+        }
+
+
+        .back-home:hover {
+
+            text-decoration: underline;
+        }
+
+
+        @media (max-width: 600px) {
+
+            .registration-box {
+
+                padding: 25px 20px;
+            }
+
+
+            .two-fields {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .registration-heading h1 {
+
+                font-size: 27px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<section class="registration-page">
+
+
+    <div class="registration-box">
+
+
+        <!-- LOGO -->
+
+        <img
+            src="../images/logo.png"
+            alt="Yaazh Innovators Logo"
+            class="registration-logo">
+
+
+        <!-- HEADING -->
+
+        <div class="registration-heading">
+
+            <p>YAAZH INNOVATORS</p>
+
+            <h1>Project Registration</h1>
+
+            <span>
+                Innovate • Inspire • Impact
+            </span>
+
+        </div>
+
+
+        <!-- FORM -->
+
+        <form
+            class="registration-form"
+            id="projectForm">
+
+
+            <!-- NAME -->
+
+            <div class="field">
+
+                <label for="name">
+                    Name
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your full name"
+                    required>
+
+            </div>
+
+
+            <!-- DESIGNATION + DEPARTMENT -->
+
+            <div class="two-fields">
+
+
+                <div class="field">
+
+                    <label for="designation">
+                        Designation
+                    </label>
+
+                    <input
+                        type="text"
+                        id="designation"
+                        name="designation"
+                        placeholder="Student / Faculty / Professional"
+                        required>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="department">
+                        Department
+                    </label>
+
+                    <input
+                        type="text"
+                        id="department"
+                        name="department"
+                        placeholder="Enter your department"
+                        required>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- PROJECT TYPE -->
+
+            <div class="field">
+
+                <label for="projectType">
+                    Project Type
+                </label>
+
+                <select
+                    id="projectType"
+                    name="projectType"
+                    required>
+
+                    <option value="">
+                        Select Project Type
+                    </option>
+
+                    <option>
+                        Academic Project
+                    </option>
+
+                    <option>
+                        Final Year Project
+                    </option>
+
+                    <option>
+                        Research Project
+                    </option>
+
+                    <option>
+                        Prototype Development
+                    </option>
+
+                    <option>
+                        AI / Machine Learning Project
+                    </option>
+
+                    <option>
+                        Medical Device Project
+                    </option>
+
+                    <option>
+                        Other
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- PROJECT DESCRIPTION -->
+
+            <div class="field">
+
+                <label for="purpose">
+                    Project Requirement / Purpose
+                </label>
+
+                <textarea
+                    id="purpose"
+                    name="purpose"
+                    rows="4"
+                    placeholder="Briefly describe your project requirement"
+                    required></textarea>
+
+            </div>
+
+
+            <!-- CONTACT + EMAIL -->
+
+            <div class="two-fields">
+
+
+                <div class="field">
+
+                    <label for="phone">
+                        Contact Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Enter contact number"
+                        required>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter email address"
+                        required>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- SUBMIT -->
+
+            <button
+                type="submit"
+                class="submit-button">
+
+                Submit Project Registration
+
+            </button>
+
+
+        </form>
+
+
+        <!-- BACK -->
+
+        <a
+            href="../index.html"
+            class="back-home">
+
+            ← Back to Home
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+<script>
+
+const GOOGLE_SCRIPT_URL =
+"https://script.google.com/macros/s/AKfycbzdIMtep3aP9-OIBL2WcorYkvBxSehpmugHES_I2749Y6l2cyoyk6Z0fZvoppGkRsHU/exec";
+
+document
+.getElementById("projectForm")
+.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const form = event.target;
+
+    const data = {
+
+        type: "project",
+
+        name: form.name.value,
+
+        designation:
+        form.designation.value,
+
+        department:
+        form.department.value,
+
+        purpose:
+        form.purpose.value,
+
+        phone:
+        form.phone.value,
+
+        email:
+        form.email.value,
+
+        projectType:
+        form.projectType.value
+
+    };
+
+
+    fetch(GOOGLE_SCRIPT_URL, {
+
+        method: "POST",
+
+        body: JSON.stringify(data)
+
+    })
+
+    .then(response => response.text())
+
+    .then(result => {
+
+        alert(
+            "Project registration submitted successfully!"
+        );
+
+        form.reset();
+
+    })
+
+    .catch(error => {
+
+        alert(
+            "Something went wrong. Please try again."
+        );
+
+        console.error(error);
+
+    });
+
+});
+
+</script>
